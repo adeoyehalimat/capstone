@@ -1,5 +1,5 @@
 <template >
-    <h1> this is the home pages</h1>
+   
     <div class="welcome" >
             <div class="welcome-image">
                 <div class="welcome-note">

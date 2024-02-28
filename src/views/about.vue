@@ -83,7 +83,7 @@
     top: 959px;
     left: 72px;
     gap: 84px;
-    /* position: fixed; */
+    position: absolute;
 
 }
 .about-page-image{
