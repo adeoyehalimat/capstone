@@ -19,7 +19,8 @@
     
 </template>
 
-<script>
+<script setup>
+
 
 </script>
 
@@ -27,7 +28,7 @@
 .user{
     width: 1440px;
     height: 492px;
-    top: 2121px;
+    top: 200px;
     position: absolute;
     background: rgba(255, 237, 204, 0.5);
     display: flex;

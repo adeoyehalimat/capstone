@@ -1,5 +1,5 @@
 <template>
-    <div class="parent">
+    <div class="parent-u">
         <div class="child1">
             <div class="child11">
                 <img src="https://s3-alpha-sig.figma.com/img/0281/24af/0abc98419a146364bf2e168a4f6973f5?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iSFAx00v9hmbuR9Zqie8huuSi-v2UNxb4NdmNmW6kQSmQT0fss2z6HHosKdPOmpsXpi1VapfYMwmu4rBigNtq9iy1A8vZmU1nD3ITS8CvU143uYJEngCXvjF53STm0sMLkV8NeXdCyBkwD-NAUXB1GxYO9jP2X7ufCiOUbuUtZqjT7OkEx9qUBreHxkoGpG9zVciU-PYliLoR03uwr4KqdhMWIgBigv8S1eQH57jTXZhXV2vLALcdBFb9JlDi5F2GviJWSumtg3cVNhriuvdSnIU-A8b6kax2jga6Mg0zv~Kb~t9Irj9f~ROBYX6FgpOujzuvOM24PUVhmLh82RRCg__" alt="" 
@@ -31,7 +31,7 @@
 <script>
 </script>
 <style scoped>
-.parent{
+.parent-u{
     width: 1,127px;
     height: 412px;
     top: 2709px;

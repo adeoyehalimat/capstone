@@ -71,7 +71,9 @@
 </template>
 
 
-<script>
+<script setup>
+
+
 
 </script>
 
@@ -80,7 +82,7 @@
 .about-page{
     width: 1296px;
     height: 404px;
-    top: 959px;
+    top: 200px;
     left: 72px;
     gap: 84px;
     position: absolute;
@@ -104,7 +106,7 @@
 .why {
     width: 1040px;
     height: 555px;
-    top: 1459px;
+    top: 700px;
     left: 200px;
     gap: 70px;
     position: absolute;

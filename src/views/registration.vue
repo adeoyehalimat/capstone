@@ -2,16 +2,22 @@
     <div class="signup-page">
             <div class="signup-image">
                 <div :style="{width: '550px', height: '168px', top: '385px', gap: '24px', left: '36px', position: 'absolute'}" >
-                    <div :style="{width: '214px',height: '72px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '48px',fontWeight: '700',lineHeight: '72px',letterSpacing: '0em',textAlign: 'center',marginLeft: '130px', color: 'rgba(255,255,255,1)'}"> CHATTER </div>
-                    <div :style="{width: '550px',height: '72px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '24px',fontWeight: '500',lineHeight: '36px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(255,255,255,1)'}"> Unleash the Power of Words, Connect with Like-minded Readers and Writers</div>
+                    <div 
+                        :style="{width: '214px',height: '72px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '48px',fontWeight: '700',lineHeight: '72px',letterSpacing: '0em',textAlign: 'center',marginLeft: '130px', color: 'rgba(255,255,255,1)'}">
+                        CHATTER 
+                    </div>
+                    <div 
+                        :style="{width: '550px',height: '72px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '24px',fontWeight: '500',lineHeight: '36px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(255,255,255,1)'}"> 
+                        Unleash the Power of Words, Connect with Like-minded Readers and Writers
+                    </div>
                 </div>
             </div>
             <div class="register">
                 <div class="heading">
                     <div class="registration">
                         <div class="first-heading">
-                            <div :style="{width: '74px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> REGISTER </div>
-                            <div :style="{width: '58px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> LOG IN </div> 
+                            <router-link to="registration" :style="{width: '74px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> REGISTER </router-link>
+                            <router-link to="login" :style="{width: '58px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> LOG IN </router-link> 
                         </div>
                         <div class="lines" :style="{width: '440px', height: '6px'}">
                             <div :style="{width: '220px', height: '6px', top: '36px' , left: '0px' , position: 'absolute',background: 'rgba(84, 62, 224, 1)'}"></div>
@@ -26,11 +32,11 @@
                     <div :style="{width : '516px', height: '92px',gap: '12px',display: 'flex',flexDirection: 'row',}">
                         <div :style="{width : '252px', height: '92px',gap: '12px'}">
                             <label :style="{width: '78px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '400',lineHeight: '24px',letterSpacing: '0em',textAlign: 'left', color: 'rgba(59, 59, 59, 1)'}"> First name </label>
-                            <input type="text" placeholder="John " :style="{width: '252px', height: '56px', borderRadius: '8px', border: '1px solid rgba(206, 212, 218, 1)', padding:'(10px, 16px, 10px, 16px)', boxShadow: '0px 0px 1px 0px rgba(33, 37, 41, 0.08)' }" >
+                            <input type="text" v-model="firstname" placeholder="John " :style="{width: '252px', height: '56px', borderRadius: '8px', border: '1px solid rgba(206, 212, 218, 1)', padding:'(10px, 16px, 10px, 16px)', boxShadow: '0px 0px 1px 0px rgba(33, 37, 41, 0.08)' }" >
                         </div>
                         <div  :style="{width : '252px', height: '92px',gap: '12px'}">
                             <label :style="{width: '77px',height: '24px',fontFamily: '\'DM Sans\', sans-serif',  borderRadius: '8px', fontSize: '16px',fontWeight: '400',lineHeight: '24px',letterSpacing: '0em',textAlign: 'left', color: 'rgba(59, 59, 59, 1)'}"> Last name </label>
-                            <input type="text"  placeholder="Doe " :style="{width: '252px', height: '56px', borderRadius: '8px', border: '1px solid rgba(206, 212, 218, 1)', padding:'(10px, 16px, 10px, 16px)', boxShadow: '0px 0px 1px 0px rgba(33, 37, 41, 0.08)' }" >
+                            <input type="text" v-model="lastname"  placeholder="Doe " :style="{width: '252px', height: '56px', borderRadius: '8px', border: '1px solid rgba(206, 212, 218, 1)', padding:'(10px, 16px, 10px, 16px)', boxShadow: '0px 0px 1px 0px rgba(33, 37, 41, 0.08)' }" >
                         </div>
                        
                     </div>
@@ -70,7 +76,7 @@
                     </div>
                     
                     <div class="button-container">
-                            <button :style ="{backgroundColor: 'rgba(84, 62, 224, 1)', border: 'none',color:'rgba(255, 255, 255, 1)', height:'27px',top:'14.5px', left: '173px', position:'absolute', fontFamily: '\'DM Sans\', sans-serif', fontSize:'18px', fontWeight: '700', lineHeight: '27px', textAlign:'center',  }"> Create account </button>
+                            <button type="submit" @click="handleCreateAccount" :style ="{backgroundColor: 'rgba(84, 62, 224, 1)', border: 'none',color:'rgba(255, 255, 255, 1)', height:'27px',top:'14.5px', left: '173px', position:'absolute', fontFamily: '\'DM Sans\', sans-serif', fontSize:'18px', fontWeight: '700', lineHeight: '27px', textAlign:'center',  }"> Create account </button>
                     </div>
                     
                     <button :style="{width : '520px',top:'650px', position: 'absolute', height: '51px',gap: '11px', borderRadius: '8px', border: '1px solid rgba(208,208,208, 1)',display: 'flex',flexDirection: 'row',}">
@@ -92,7 +98,15 @@
 
 
 
-<script setup>
+<script >
+export default{
+    methods: { handleCreateAccount(){
+        this.$router.push("/message");
+        console.log('button clicked')
+    }
+    
+}
+}
 
 </script>
 

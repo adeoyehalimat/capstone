@@ -6,8 +6,8 @@
         </div>
         <div class="registration">
             <div class="first-heading">
-                <div :style="{width: '74px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> REGISTER </div>
-                <div :style="{width: '58px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> LOG IN </div> 
+                <router-link to="registration" :style="{width: '74px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> REGISTER </router-link>
+                <router-link to="login" :style="{width: '58px',height: '24px',fontFamily: '\'DM Sans\', sans-serif', fontSize: '16px',fontWeight: '700',lineHeight: '24px',letterSpacing: '0em',textAlign: 'center', color: 'rgba(17, 17, 17, 1)'}"> LOG IN </router-link> 
             </div>
             <div class="lines" :style="{width: '440px', height: '6px'}">
                 <div :style="{width: '220px', height: '6px', top: '36px' , left: '0px' , position: 'absolute',backgroundColor: 'rgba(208, 208, 208, 1)'}"></div>
@@ -27,7 +27,7 @@
         </form>
         
         <div class="button-container">
-                <button :style ="{ backgroundColor: 'rgba(84, 62, 224, 1)', border: 'none',color:'rgba(255, 255, 255, 1)', height:'27px',top:'14.5px', left: '220px', position:'absolute', fontFamily: '\'DM Sans\', sans-serif', fontSize:'18px', fontWeight: '700', lineHeight: '27px', textAlign:'center',  }"> Log in</button>
+                <button @click="handleLogin" :style ="{ backgroundColor: 'rgba(84, 62, 224, 1)', border: 'none',color:'rgba(255, 255, 255, 1)', height:'27px',top:'14.5px', left: '220px', position:'absolute', fontFamily: '\'DM Sans\', sans-serif', fontSize:'18px', fontWeight: '700', lineHeight: '27px', textAlign:'center',  }"> Log in</button>
         </div>
     </div>
     
@@ -37,10 +37,25 @@
 
 
 <script>
+import { useRouter } from 'vue-router';
 export default {
-    setup() {
+    
+  
+
+    setup() { 
+        const router = useRouter(); 
+      const handleLogin = () => {
+      router.push("/blogs");
+      console.log('button clicked');
+     };
+
+     return {
+      handleLogin
         
-    },
+     };
+
+        
+    }
 }
 </script>
 
